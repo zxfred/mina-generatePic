@@ -49,7 +49,6 @@ class generatePicPannel {
         for (let img of this.imgs) {
             let [x, y] = img.pos
             let [w, h] = img.size
-            // 绘图
             ctx.save()
             if (img.shadow) {
                 ctx.setShadow(img.shadow.offsetX, img.shadow.offsetY, img.shadow.blur, img.shadow.color)
@@ -79,16 +78,15 @@ class generatePicPannel {
     /**
      * 生成长图的url
      */
-    generatePicUrl() {
+    generatePicUrl(isSave) {
         wx.canvasToTempFilePath({
             canvasId: this.canvasId,
             quality: 1, // 图片质量 0-1, 1为最大
             destWidth: 750,
             destHeight: 1266,
             success: res => {
-                console.log(res)
                 this.tempPicUrl = res.tempFilePath
-                // this.savePic()
+                if (isSave) this.savePic
             },
             fail: err => {
                 console.log(err)

@@ -131,6 +131,7 @@ class generatePicPannel {
             this.imgs.map((v, i) => {
                 v.url = res[i]
             })
+            this.drawPic()
             wx.hideLoading()               
         })
         .catch(err => {

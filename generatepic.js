@@ -86,7 +86,7 @@ class generatePicPannel {
             destHeight: 1266,
             success: res => {
                 this.tempPicUrl = res.tempFilePath
-                if (isSave) this.savePic
+                this.savePic()
             },
             fail: err => {
                 console.log(err)

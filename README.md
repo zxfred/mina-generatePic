@@ -1,6 +1,10 @@
-## 微信小程序生成长图
+## 微信小程序工具
 
-### 流程图
+##### 一些自己写的小程序轮子
 
-![flow_chart](https://github.com/zxfred/mina-generatePic/raw/master/flow_chart.jpg)
+------
+
+**generatePic**：使用 canvas 生成长图并保存到手机
+
+**getOpenData**：获取开放性数据（如群ID），该代码应该运行在服务端
 
